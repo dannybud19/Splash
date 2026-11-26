@@ -1,12 +1,12 @@
-# GreenFN design
+# Splash design
 
 Status: draft 1 (19 Nov 2026). Low fidelity first, then iterate in Figma, then code.
 
-Figma: https://www.figma.com/design/rudsn3TASAFVvBxYq40VFK/Untitled (page "GreenFN wireframes": frames 01 to 05, this file as a board underneath, local components at the bottom).
+Figma: https://www.figma.com/design/rudsn3TASAFVvBxYq40VFK/Untitled (page "Splash wireframes": frames 01 to 05, this file as a board underneath, local components at the bottom).
 
 ## 1. Idea
 
-GreenFN becomes **one screen**: a dashboard where the map of every NBA season is the background and everything else floats on top of it. You search a player, his career lights up on the map, his comps appear beside it, and you can see why they are similar without leaving the screen.
+Splash becomes **one screen**: a dashboard where the map of every NBA season is the background and everything else floats on top of it. You search a player, his career lights up on the map, his comps appear beside it, and you can see why they are similar without leaving the screen.
 
 | Principle | What it means here |
 |---|---|
@@ -67,7 +67,7 @@ Position uses five distinct hues (must pass a colour-blind check before code), w
 
 ```
 +--------------------------------------------------------------------------------+
-| [GreenFN] [ Search a player ...       ]                 [Decade|Position] [?]  |
+| [Splash] [ Search a player ...       ]                 [Decade|Position] [?]  |
 |                                                                                |
 | +------------------+                                   +---------------------+ |
 | | PLAYER CARD      |                                   | CAREER COMPS        | |
@@ -83,7 +83,7 @@ Position uses five distinct hues (must pass a colour-blind check before code), w
 ```
 | Zone | Content | Behaviour |
 |---|---|---|
-| Top bar (floating, 64 high) | Wordmark "GreenFN", search, colour toggle, "?" | Always visible |
+| Top bar (floating, 64 high) | Wordmark "Splash", search, colour toggle, "?" | Always visible |
 | Search | Type-ahead: name, years, position. Arrow keys and Enter. Shows 6 suggestions plus 3 example players when empty | Selecting flies the map to the career |
 | Player card (left, 360 wide) | Name, years, seasons, position, career shape in words ("steadier than 99% of players") | Appears after a search; collapses to a pill |
 | Comps panel (right, 380 wide) | Top 10 with rank, name, years, score bar, position. Lambda slider with label and one-line explanation, "back to default" | Hover a comp: his career draws on the map and links to the selected player. Click: opens why-similar |
@@ -91,7 +91,7 @@ Position uses five distinct hues (must pass a colour-blind check before code), w
 | Legend (bottom, left of centre) | Decade or position key, matching the toggle | Click a key to isolate that group |
 | Map controls (bottom right) | Zoom in, zoom out, reset view | Scroll and pinch also zoom |
 | Map note (bottom centre) | "The map is a 2D picture for intuition. Comps are computed in the full 32-dimension model." | Always visible, small |
-| About ("?") | Popover: what GreenFN is, how it works, headline numbers, limits, data credit, GitHub link | Esc closes |
+| About ("?") | Popover: what Splash is, how it works, headline numbers, limits, data credit, GitHub link | Esc closes |
 
 Empty state (nobody selected): map only, search centred and larger, legend, note, and "Try: Michael Jordan, Stephen Curry, Tim Duncan".
 

@@ -28,7 +28,7 @@ Map dots: light theme draws dots at about 55% alpha on white (pastel look); dark
 
 | Role | Font | Size / weight / tracking |
 |---|---|---|
-| Wordmark GREENFN | Doto 900 | 24 px, uppercase |
+| Wordmark SPLASH | Doto 900 | 24 px, uppercase |
 | Hero heading (FIND YOUR PLAYER, player name) | Doto 900 | 30 px, line-height 33 px |
 | Team code in A1 (CHI) | Doto 900 | 32 px |
 | Row numbers (01 to 10) | Doto 900 | 16 px, `faint` |
@@ -47,7 +47,7 @@ Map dots: light theme draws dots at about 55% alpha on white (pastel look); dark
 | Gap between blocks | 24 px |
 | Map container | 904 x 820, padding 20 px, radius 20, 1 px `border` |
 | Right column | 432 wide |
-| GREENFN block | 432 x 58, padding 0 20 |
+| SPLASH block | 432 x 58, padding 0 20 |
 | Right panel | fills the rest (820 - 58 - 24 = 738 high), radius 20 |
 | Control row (map) | labels at y 28 inside the container; controls 40 high, 8 px under the label |
 | Search box | 358 x 40, radius 10, 1.5 px `ink` border (focused look is the default in the frames) |

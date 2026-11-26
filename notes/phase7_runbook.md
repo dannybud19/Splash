@@ -1,6 +1,6 @@
 # Phase 7 runbook (for Claude Code)
 
-This file tells Claude Code how to build the GreenFN app in one unattended pass. Read all of it, plus `notes/phase7_plan.md`, before starting. Repo `~/Desktop/GreenFN`, branch `phase-7`, Python venv activated with `source .venv/bin/activate` for the Python steps.
+This file tells Claude Code how to build the Splash app in one unattended pass. Read all of it, plus `notes/phase7_plan.md`, before starting. Repo `~/Desktop/GreenFN`, branch `phase-7`, Python venv activated with `source .venv/bin/activate` for the Python steps.
 
 The plan file wins over this runbook if they disagree.
 
@@ -145,6 +145,6 @@ Status: running | stopped (reason) | finished
 
 **Commit:** the run log (and a plan change-log row if anything deviated). Message `Phase 7: run log`. Push.
 
-Open a **draft** pull request `phase-7` into `main`, titled `Phase 7: GreenFN app (local build verified, deploy pending)`, summarising what's built and the checks. Don't merge, don't deploy.
+Open a **draft** pull request `phase-7` into `main`, titled `Phase 7: Splash app (local build verified, deploy pending)`, summarising what's built and the checks. Don't merge, don't deploy.
 
 Final message to Danny: PR link, versions, parity rates, build result, local checks, data size, anything that needed a fix, and his two deploy steps (confirm the licence; import the repo into Vercel with root directory `web`).

@@ -7,7 +7,7 @@ Written before any app code. Earlier plans still apply. If a rule changes, recor
 | Decision | Choice | Why |
 |---|---|---|
 | Architecture | **Next.js only**, on Vercel. No separate Python server | The model's outputs are small precomputed files (Phase 6). Pages and API routes read them; the lambda slider runs in TypeScript. One app, one deploy, free tier |
-| Hosting | **Public**, on its own Vercel URL (for example `greenfn.vercel.app`) | Linkable from the CV and portfolio; can move to a custom domain later |
+| Hosting | **Public**, on its own Vercel URL (for example `splash.vercel.app`) | Linkable from the CV and portfolio; can move to a custom domain later |
 | FastAPI | Not in v1 | Only needed if the app later runs the model live (for example comps for a user's own stats). Recorded as a possible v2 |
 
 This replaces the roadmap's "FastAPI endpoints" line for v1.
@@ -19,7 +19,7 @@ This replaces the roadmap's "FastAPI endpoints" line for v1.
 | `/` Search | Type-ahead over every player (name, years, position). A few example players as links |
 | `/player/[id]` | Header: name, years, seasons, position, career shape (spread percentile in words, e.g. "steadier than 99% of players"). Top 10 career comps with a score bar and each comp's years. **Lambda slider** (0 to 1): recomputes the comps live; at 0 it matches the precomputed list. **Why similar**: click a comp to see a bar chart of the 15 stats (positive = alike, negative = different), for the top 5 at lambda 0; other comps say the breakdown is only precomputed for the default top 5. **Mini map**: the player's career as a line through his seasons, his comps' careers faint behind it |
 | `/map` | Every season on the 2D map (canvas, about 14,700 points), coloured by decade or position (toggle). Search a player to draw his career trajectory. A note that the map is for intuition only and comps are computed in the full model |
-| `/about` | What GreenFN is, how it works (seasons, encoder, era centring, career profiles), the headline results from the reports (with numbers exactly as in `reports/`), honest limits (Nash and Paul, era only removed for a linear reader, Kareem only from 1980, one seed), data attribution, link to the GitHub repo |
+| `/about` | What Splash is, how it works (seasons, encoder, era centring, career profiles), the headline results from the reports (with numbers exactly as in `reports/`), honest limits (Nash and Paul, era only removed for a linear reader, Kareem only from 1980, one seed), data attribution, link to the GitHub repo |
 
 Every page carries the data attribution in the footer.
 

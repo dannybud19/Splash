@@ -105,7 +105,7 @@ const STATES = {
   "playback-last": async (page) => playbackAt(page, 13),
   about: async (page) => {
     await ready(page, "/player/jordami01");
-    await page.getByRole("button", { name: "About GreenFN" }).click();
+    await page.getByRole("button", { name: "About Splash" }).click();
     await settle(page, 700);
   },
 };

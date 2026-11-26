@@ -14,7 +14,7 @@ const after = await names();
 await p.getByRole("button", { name: "Back to default" }).click(); await p.waitForTimeout(800);
 const reset = await names();
 await p.getByRole("switch", { name: "Dark theme" }).click(); await p.waitForTimeout(400);
-const theme = await p.evaluate(() => [document.documentElement.dataset.theme, localStorage.getItem("greenfn-theme")]);
+const theme = await p.evaluate(() => [document.documentElement.dataset.theme, localStorage.getItem("splash-theme")]);
 await p.reload({ waitUntil: "networkidle" });
 const persisted = await p.evaluate(() => document.documentElement.dataset.theme);
 await p.goto(base + "/map"); const red = p.url();

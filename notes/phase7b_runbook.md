@@ -1,6 +1,6 @@
 # Phase 7b runbook (for Claude Code)
 
-How to build the redesigned GreenFN dashboard in one unattended pass. Read all of it, plus `notes/phase7b_plan.md`, `design.md` and `nothing-style.md`, before starting. Repo `~/Desktop/GreenFN`. Python steps run in the venv (`source .venv/bin/activate`). The plan wins if the two disagree.
+How to build the redesigned Splash dashboard in one unattended pass. Read all of it, plus `notes/phase7b_plan.md`, `design.md` and `nothing-style.md`, before starting. Repo `~/Desktop/GreenFN`. Python steps run in the venv (`source .venv/bin/activate`). The plan wins if the two disagree.
 
 ## 0. Ground rules
 
