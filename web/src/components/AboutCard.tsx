@@ -27,7 +27,7 @@ export function AboutCard({ onClose, attribution }: { onClose: () => void; attri
       ref={ref}
       id="about-card"
       role="dialog"
-      aria-label="About GreenFN"
+      aria-label="About Splash"
       tabIndex={-1}
       initial={{ opacity: 0, scale: 0.6 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -37,7 +37,7 @@ export function AboutCard({ onClose, attribution }: { onClose: () => void; attri
       className="absolute inset-x-0 top-0 z-20 rounded-[20px] border-[1.5px] border-ink bg-surface p-5 outline-none"
     >
       <div className="flex items-start justify-between">
-        <p className="dot-heading text-[24px] leading-none">GreenFN</p>
+        <p className="dot-heading text-[24px] leading-none">Splash</p>
         <button type="button" onClick={onClose} aria-label="Close About" className="-m-1 flex size-7 items-center justify-center rounded-full text-[16px] transition-colors duration-[120ms] hover:bg-tint">
           ×
         </button>

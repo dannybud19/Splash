@@ -9,7 +9,7 @@ const doto = Doto({ variable: "--font-doto", weight: "900", subsets: ["latin"] }
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", weight: ["400", "500", "600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: { default: "GreenFN", template: "%s · GreenFN" },
+  title: { default: "Splash", template: "%s · Splash" },
   description: "Find NBA players whose careers look alike, from the style of every season they played since 1980.",
 };
 

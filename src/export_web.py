@@ -254,7 +254,7 @@ def main() -> None:
         "model": manifest["model"], "counts": manifest["counts"], "exportsCreated": manifest["created"],
         "attribution": "Statistics from Basketball Reference via the Kaggle dataset sumitrodatta/nba-aba-baa-stats (CC0). "
                        "Points, rebounds and assists per game are shown as published there; comps, breakdowns and "
-                       "map are GreenFN's own model outputs.",
+                       "map are Splash's own model outputs.",
     }, indent=2))
 
     sizes = {p.name: p.stat().st_size for p in OUT.iterdir() if p.is_file()}

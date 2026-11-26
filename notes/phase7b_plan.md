@@ -6,7 +6,7 @@ Written 19 Nov 2026, before any redesign code. Phase 7's app stays the base: sam
 
 | What | Where | Wins on |
 |---|---|---|
-| Visual design | Figma file `rudsn3TASAFVvBxYq40VFK` (GreenFN), frames **06 Team selected, dark** (node `27:250`) and **06 Team selected, light** (node `27:5699`) | Layout, spacing, colours, type sizes |
+| Visual design | Figma file `rudsn3TASAFVvBxYq40VFK` (Splash), frames **06 Team selected, dark** (node `27:250`) and **06 Team selected, light** (node `27:5699`) | Layout, spacing, colours, type sizes |
 | Design rules | `nothing-style.md` (repo root) | Fonts, labels, dots-not-bars, what text is allowed |
 | Product rules | `design.md` (repo root) | What each zone does, interactions, accessibility |
 | Reference renders | `notes/design/*.png` | States the Figma file doesn't have yet (start screen, player selected, comp open, About open) |
@@ -21,17 +21,17 @@ The Figma map dots are an approximation drawn for the mock-up. The app always dr
 | Decision | Choice |
 |---|---|
 | Structure | **One page.** No `/map` or `/about` pages; `/player/[id]` stays as a deep link that opens the dashboard with that player selected |
-| Layout | Bento: map container left (904 wide at 1440), right column 432 wide: GREENFN block, then one scrolling panel. 40 px outer padding, 24 px gaps |
+| Layout | Bento: map container left (904 wide at 1440), right column 432 wide: SPLASH block, then one scrolling panel. 40 px outer padding, 24 px gaps |
 | Style | Nothing OS: black, white, greys, one red (`#D71921` light, `#FF2D2D` dark) for the selected player. No gradients, no shadows |
 | Fonts | **Doto** (headings, names, big numbers, team code) and **Geist Mono** (everything else), both via `next/font/google`. Nothing's own NDot/NType 82 are not licensed for use, never ship them |
-| Themes | Light and dark, toggle (sun/moon) in the GREENFN block. Follows the system on first visit, then remembers the choice. No flash on load |
+| Themes | Light and dark, toggle (sun/moon) in the SPLASH block. Follows the system on first visit, then remembers the choice. No flash on load |
 | Motion | **Motion** (motion.dev), React API from `motion/react`. Lots of micro-interactions (section 6), all off or reduced to fades under `prefers-reduced-motion` |
 | Map | Canvas for the 14,672 dots (already works). An SVG layer on top for the selected and comparing player's dots, so Motion can animate them |
 | Personalisation | Start card: Legends, Your team, Search. A team dropdown in the map container. Selecting a team lights up its seasons and shows its code (for example `CHI`) centred in grid cell A1. **Letters only, never a logo** (team logos are trademarks) |
 | Comps | One scrolling right panel (player card, then all 10 comps). One comp open at a time; the open card shows all 15 why-similar stats as dot rows in its own scroll area, 4 visible at once |
 | Why-similar graphic | Rows of 16 dots, filled in proportion to the value; dots for stats that pull the careers apart are grey. One plain sentence above the rows |
 | Lambda slider | Kept, as a compact row in the player card ("Career shape weight"), same maths and parity test as Phase 7 |
-| About | (i) in the GREENFN block opens a small card: one sentence plus the GitHub link |
+| About | (i) in the SPLASH block opens a small card: one sentence plus the GitHub link |
 
 ## 3. What the screen shows
 
@@ -40,7 +40,7 @@ The Figma map dots are an approximation drawn for the mock-up. The app always dr
 | **Start** (nobody selected) | All dots at full strength, grid A to H / 1 to 6, KEY, zoom | START HERE / FIND YOUR PLAYER, one sentence, tabs **Legends / Your team / Search**. Legends: the 10 hand-picked players with their real closest match |
 | **Team selected** | Team's seasons drawn as ink dots, the rest dimmed; team code centred in A1; KEY adds "Team season" | "Your team" tab: players with the most qualified seasons for that team, each with a dot meter and the count |
 | **Player selected** | His seasons as red dots with a single name tag, no connecting lines; hovered or open comp as grey dots | Scrollable: player card (Doto name, seasons / from / to / position, consistency dot meter, lambda row), then all 10 comps with region tags; one opens to the why-similar card |
-| **About open** | unchanged | Small card under the GREENFN block |
+| **About open** | unchanged | Small card under the SPLASH block |
 
 KEY text is exactly: `KEY · 1 dot = 1 player season` plus the swatches (decades, or positions, or regions, depending on the switch), and Selected / Comparing / Team season when relevant. Zoom is exactly `− 1.0× +`. No other captions on the map.
 
@@ -80,7 +80,7 @@ Regions are a reading aid on the 2D picture, not a model output. The About card 
 | `TeamSelect` | Dropdown of `teams.json`, "All teams" first |
 | `ColourSwitch` | Decade / Position / Region pill switch |
 | `Key`, `ZoomControl` | Exact text from section 3 |
-| `BrandBlock` | GREENFN (Doto), theme toggle, (i) |
+| `BrandBlock` | SPLASH (Doto), theme toggle, (i) |
 | `AboutCard` | One sentence + GitHub link |
 | `StartCard` | Tabs; Legends list; Your team list; Search tab focuses the search box |
 | `PlayerCard` | Doto name, four stats, consistency meter, lambda row |

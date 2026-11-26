@@ -195,7 +195,7 @@ export function Dashboard({ initial }: { initial: Initial }) {
   }, []);
 
   useEffect(() => {
-    document.title = selected ? `${selected.name} · GreenFN` : "GreenFN";
+    document.title = selected ? `${selected.name} · Splash` : "Splash";
   }, [selected]);
 
   return (
@@ -232,7 +232,7 @@ export function Dashboard({ initial }: { initial: Initial }) {
       </motion.div>
       <div className="flex min-h-0 flex-col gap-6 max-md:contents">
         <motion.header {...rise(1)} className="card h-[58px] shrink-0 max-md:order-1" data-box="brand">
-          <h1 className="sr-only">GreenFN: NBA career comps</h1>
+          <h1 className="sr-only">Splash: NBA career comps</h1>
           <BrandBlock theme={theme} onToggleTheme={toggleTheme} aboutOpen={aboutOpen} onAbout={() => setAboutOpen((o) => !o)} aboutRef={aboutRef} />
         </motion.header>
         <motion.div

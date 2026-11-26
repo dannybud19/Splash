@@ -25,13 +25,13 @@ function Moon() {
 
 type Props = { theme: Theme; onToggleTheme: () => void; aboutOpen: boolean; onAbout: () => void; aboutRef: React.RefObject<HTMLButtonElement | null> };
 
-/** GREENFN wordmark (Doto), sun/moon theme switch and the (i) button that opens About. */
+/** SPLASH wordmark (Doto), sun/moon theme switch and the (i) button that opens About. */
 export function BrandBlock({ theme, onToggleTheme, aboutOpen, onAbout, aboutRef }: Props) {
   const dark = theme === "dark";
   return (
     <div className="flex h-full items-center justify-between px-5">
-      <p className="dot-heading text-[24px] leading-none" aria-label="GreenFN">
-        GreenFN
+      <p className="dot-heading text-[24px] leading-none" aria-label="Splash">
+        Splash
       </p>
       <div className="flex items-center gap-3">
         <button
@@ -59,7 +59,7 @@ export function BrandBlock({ theme, onToggleTheme, aboutOpen, onAbout, aboutRef 
         <motion.button
           ref={aboutRef}
           type="button"
-          aria-label="About GreenFN"
+          aria-label="About Splash"
           aria-expanded={aboutOpen}
           aria-controls="about-card"
           onClick={onAbout}

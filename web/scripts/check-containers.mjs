@@ -1,6 +1,6 @@
 // Fixed container sizes (Phase 7c item 4).
 //   node scripts/check-containers.mjs [baseUrl]
-// The map bento, GREENFN block, right panel, search box and team dropdown must have identical x, y, width and
+// The map bento, SPLASH block, right panel, search box and team dropdown must have identical x, y, width and
 // height in every state, at 1440 x 900, in both themes. Player names must stay on one line.
 import { chromium } from "playwright";
 

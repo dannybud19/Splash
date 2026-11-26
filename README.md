@@ -1,15 +1,15 @@
-# GreenFN
+# Splash
 
 **Find the NBA careers that played most like your favourite player's.**
 
 **Live app: [greenfn-seven.vercel.app](https://greenfn-seven.vercel.app)**
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/greenfn-dark.png">
-  <img alt="GreenFN dashboard: every NBA season since 1980 on one map, with a start card of legends to try" src="docs/images/greenfn-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/splash-dark.png">
+  <img alt="Splash dashboard: every NBA season since 1980 on one map, with a start card of legends to try" src="docs/images/splash-light.png">
 </picture>
 
-GreenFN is a machine-learning model that finds NBA players whose careers look alike, based on the style of every season they played since 1980. Type in anyone, or pick your team, and it shows the 10 closest career comps, why they match stat by stat, and every season ever played on one map.
+Splash is a machine-learning model that finds NBA players whose careers look alike, based on the style of every season they played since 1980. Type in anyone, or pick your team, and it shows the 10 closest career comps, why they match stat by stat, and every season ever played on one map.
 
 ## What you can do in the app
 
@@ -122,7 +122,7 @@ UMAP squeezes the 32-dimension embeddings down to 2D (15 neighbours, cosine dist
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/results-dark.png">
-  <img alt="GreenFN vs baselines: career matching 0.981 vs 0.916, season retrieval 0.746 vs 0.668, sanity comps passed 11 vs 6 of 15, era left 0.227 vs 0.323" src="docs/images/results-light.png">
+  <img alt="Splash vs baselines: career matching 0.981 vs 0.916, season retrieval 0.746 vs 0.668, sanity comps passed 11 vs 6 of 15, era left 0.227 vs 0.323" src="docs/images/results-light.png">
 </picture>
 
 All figures are from `reports/`. Validation numbers chose the settings, so they're optimistic; the held-back test split hasn't been used yet.

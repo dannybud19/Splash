@@ -3,7 +3,7 @@
 
 export type Theme = "light" | "dark";
 
-export const THEME_KEY = "greenfn-theme";
+export const THEME_KEY = "splash-theme";
 
 /** Runs inline in <head> before paint, so the page never flashes the wrong theme. Kept tiny and dependency-free. */
 export const themeScript = `(function(){try{var t=localStorage.getItem("${THEME_KEY}");}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);document.documentElement.style.colorScheme=t;})();`;

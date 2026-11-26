@@ -881,7 +881,7 @@ wheels = [
 ]
 
 [[package]]
-name = "greenfn"
+name = "splash"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
